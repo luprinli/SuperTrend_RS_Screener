@@ -158,7 +158,7 @@ if US_scan:
 	if (fetch_period == '2y'):
 		df_desired_length = 504 
 	elif (fetch_period == '1y'):
-		df_desired_length = 251
+		df_desired_length = 252
 	else:
 		df_desired_length = 'none'
 elif IND_scan:
