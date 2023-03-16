@@ -172,7 +172,7 @@ else:
 	if (fetch_period == '2y'):
 		df_desired_length = 504 
 	elif (fetch_period == '1y'):
-		df_desired_length = 250
+		df_desired_length = 252
 	else:
 		df_desired_length = 'none'
 
