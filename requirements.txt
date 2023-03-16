@@ -6,3 +6,4 @@ seaborn==0.11.2
 streamlit
 yahoofinancials==1.14
 yfinance==0.1.74
+openpyxl
