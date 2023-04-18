@@ -156,16 +156,16 @@ else:
 # ======================================================================================= # 
 if US_scan:
 	if (fetch_period == '2y'):
-		df_desired_length = 504 
+		df_desired_length = len(yf.download('AAPL', period='2y'))
 	elif (fetch_period == '1y'):
-		df_desired_length = 251
+		df_desired_length = len(yf.download('AAPL', period='1y'))
 	else:
 		df_desired_length = 'none'
 elif IND_scan:
 	if (fetch_period == '2y'):
-		df_desired_length = 498 
+		df_desired_length = len(yf.download('ITC.NS', period='2y'))
 	elif (fetch_period == '1y'):
-		df_desired_length = 250
+		df_desired_length = len(yf.download('ITC.NS', period='1y'))
 	else:
 		df_desired_length = 'none'
 else:
@@ -278,4 +278,16 @@ if st.button('Start the scan now!'):
 					ax8.text(0.13, 0.85, '10%%-TP:%s '%(round(1.1*float(df['Close'].tail(1)),2)), fontsize=12, bbox={'facecolor': 'green', 'pad': 12, 'alpha': 0.5})
 									
 					st.pyplot(fig)
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
 									
