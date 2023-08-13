@@ -223,6 +223,7 @@ if st.button('Start the scan now!'):
 			
 			cross_points = df_RS.index[zero_crossing(df_RS['sg_RS'])]
 			cross_vals = df_RS.loc[cross_points]
+			print ("RS Crossing Values")
 			print(cross_vals)
 			
 			supertrend = Supertrend(df, atr_period, atr_multiplier)
@@ -232,7 +233,9 @@ if st.button('Start the scan now!'):
 				last_crossx = int(cross_vals['Day'].head(1))
 				last_crossy = float(cross_vals['sg_RS'].head(1))
 
-				print (last_crossx, round(last_crossy,2))
+				print ("Last Cross:", last_crossx, "Last Cross Value:", round(last_crossy,2))
+
+			print ("Last Supertrend:", supertrend['Supertrend'][-1], "Previous Supertrend:", supertrend['Supertrend'][-2])
 				
 			if not supertrend['Supertrend'][-2] and supertrend['Supertrend'][-1]:
 				if (float(df_RS['sg_RS'].head(1)) > 0):
