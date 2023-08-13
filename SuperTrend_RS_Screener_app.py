@@ -202,7 +202,7 @@ if st.button('Start the scan now!'):
 		
 		if (len(df) != df_desired_length):
 			print("Warning! Change the length to:", len(df))
-			st.write("Warning! Change the length to:", len(df))
+			st.write("Warning! Change the length (Now):", len(df), "Desired length:", df_desired_length)
 
 		else:
 			df['Vwap'] = (df['Volume']*(df['High']+df['Low']+df['Close'])/3).cumsum() / df['Volume'].cumsum()
